@@ -1,6 +1,7 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
+<meta charset="utf-8" />
 <link href='https://fonts.googleapis.com/css?family=Autour%20One' rel='stylesheet'>
 <link rel="stylesheet" type="text/css" href="right_content.css">
 <link rel="stylesheet" type="text/css" href="center_content.css">
@@ -607,7 +608,7 @@ Autoupgrade: <span id="autoupgrade_on" onclick="toggleAutoupgrade(1)">ON</span> 
 <span id="save_wiper">Wipe Save: </span><span onclick="wipeSave(0)" id="wipe_save" style="background-color:#820c06;border: 3px solid black;border-radius:3px;">Yes</span> Sure? <span onclick="wipeSave(1)" id="wipe_confirmation" style="background-color:#820c06;border: 3px solid black;border-radius:3px;">Yes</span>
 <br />
 <br />
-<span id="save_wiper">Import save: </span><span onclick="$('#import_menu').show();" id="import_save" style="background-color:#723414;border: 3px solid black;border-radius:3px;">Import</span> <span onclick="$('#import_menu').show();if (localStorage.getItem('save')) {$('#import_text').val(btoa(JSON.stringify(localStorage.getItem('save')).replace(/\\/g,'').slice(1, -1)));}" id="export_save" style="background-color:#723414;border: 3px solid black;border-radius:3px;">Export</span>
+<span id="save_wiper">Import save: </span><span onclick="$('#import_menu').show();" id="import_save" style="background-color:#723414;border: 3px solid black;border-radius:3px;">Import</span> <span onclick="$('#import_menu').show();if (localStorage.getItem('galactic_grind_save')) {$('#import_text').val(btoa(JSON.stringify(localStorage.getItem('galactic_grind_save')).replace(/\\/g,'').slice(1, -1)));}" id="export_save" style="background-color:#723414;border: 3px solid black;border-radius:3px;">Export</span>
 <br />
 <br />
 <span id="touchscreen_selector">Power Saver: </span><span onclick="togglePowersaver(0)" id="powersaver_off" style="background-color:#05630d;border: 3px solid black;border-radius:3px;">OFF</span> <span onclick="togglePowersaver(1)" id="powersaver_on" style="background-color:#820c06;border: 3px solid black;border-radius:3px;">ON</span>
@@ -619,7 +620,7 @@ Autoupgrade: <span id="autoupgrade_on" onclick="toggleAutoupgrade(1)">ON</span> 
 <img style="font-size:16;position:absolute;right:-12px;top:-12px;cursor:pointer" id="close_import_menu" onclick="$('#import_menu').hide();" src="images/button_x.png">
 <div style="text-align:center">Import/Export Save</div>
 <textarea id="import_text" style="height:180px;width:338px"></textarea>
-<div onclick="localStorage.setItem('save',atob($('#import_text').val()));location.reload();" id="import_save" style="text-align:center;background-color:#723414;border: 3px solid black;border-radius:3px;">Import</div>
+<div onclick="localStorage.setItem('galactic_grind_save',atob($('#import_text').val()));location.reload();" id="import_save" style="text-align:center;background-color:#723414;border: 3px solid black;border-radius:3px;">Import</div>
 </div>
 <div id="upgrades_menu" class="menu" style="height:360px;width:350px;">
 <img style="font-size:16;position:absolute;right:-12px;top:-12px;cursor:pointer" id="close_upgrades_menu" onclick="$('#upgrades_menu').hide();" src="images/button_x.png">
