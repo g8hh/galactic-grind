@@ -42,15 +42,15 @@ function save() {
 	for (i = 0; i < buff_defs.length; i++) {
 		save.buffs[i] = [buff_defs[i].time, buff_defs[i].stack_count, buff_defs[i].max_time];
 	}
-	localStorage.setObject("save", save);
+	localStorage.setObject("galactic_grind_save", save);
 	
-	var load = localStorage.getObject('save');
+	var load = localStorage.getObject('galactic_grind_save');
 	if (!load.special.automation) {save();}
 	//if (kongregate) {kongScore();} //kong
 }
 
 function load() {
-	var load = localStorage.getObject('save');
+	var load = localStorage.getObject('galactic_grind_save');
 	
 	if (load) { 
 		if (load.special) {special = load.special;}
